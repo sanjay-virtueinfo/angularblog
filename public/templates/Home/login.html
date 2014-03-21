@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="small-6 large-centered columns">
+    <div class="signup-panel">
+      <p class="welcome"> Welcome to this awesome app!</p>
+      <form novalidate role="form" name="loginForm" class="" ng-submit="login()">
+        <div class="row collapse">
+          <label for="loginEmail"><span class="text-danger">{{loginError}}</span></label>
+          <div class="small-2 columns">
+            <span class="prefix"><i class="fi-mail"></i></span>
+          </div>
+          <div class="small-10  columns">
+            <input type="text" ng-model="loginForm.email" placeholder="email" required="">
+          </div>
+        </div>
+        <div class="row collapse">
+          <div class="small-2 columns ">
+            <span class="prefix"><i class="fi-lock"></i></span>
+          </div>
+          <div class="small-10 columns ">
+            <input type="password" ng-model="loginForm.password" placeholder="password" required="">
+          </div>
+        </div>
+        <input type="submit" class="button" ng-disabled="loginForm.$invalid" value="Log in" />
+          <p>Don't have an account? <a href="/#/signup">Sign up!</a> Or </p>
+          <p>Forgot your password? <a href="/#/forgotpassword">Click to recover it</a></p>
+      </form>
+    </div>
+  </div>
+</div>

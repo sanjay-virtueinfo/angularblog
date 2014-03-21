@@ -1,0 +1,33 @@
+<div ng-include src="'templates/shared/nav.html'"></div>
+  
+<div class="row">
+  <div class="large-6 columns">
+
+<form name="profileForm" novalidate role="form"  ng-submit="updateProfile()" class="">
+  <div class="alert-box success radius" ng-show="flash_message">
+      {{flash_message}}
+      <a href="#" class="close">&times;</a>
+  </div>
+  <div class="row">
+    <div class="two mobile-one columns">
+      <label class="left">First Name:</label>
+    </div>
+    <div class="ten mobile-three columns">
+      <input type="text" ng-model="profileModel.first_name" placeholder="First Name" class="six" required="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="two mobile-one columns">
+      <label class="left">Last Name:</label>
+    </div>
+    <div class="ten mobile-three columns">
+      <input type="text" ng-model="profileModel.last_name" placeholder="Last Name"  class="six" required="" />
+    </div>
+  </div>
+  <input type="submit" class="button" ng-disabled="profileForm.$invalid" value="Update" />
+</form>
+
+  </div>
+</div>
+
+<div ng-include src="'templates/shared/footer.html'"></div>
